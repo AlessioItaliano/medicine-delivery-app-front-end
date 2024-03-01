@@ -1,0 +1,1 @@
+(self.webpackChunkmedicine_delivery_app_front_end=self.webpackChunkmedicine_delivery_app_front_end||[]).push([[67],{67:()=>{}}]);
