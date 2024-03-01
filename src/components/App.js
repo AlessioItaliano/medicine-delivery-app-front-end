@@ -24,7 +24,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<ShopPage />} />
-        <Route path="/" element={<ShoppingCartPage />} />
+        <Route path="shopping-cart" element={<ShoppingCartPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>

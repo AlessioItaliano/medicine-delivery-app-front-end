@@ -1,7 +1,9 @@
 // import { useSelector } from "react-redux";
 // import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
-// import mainLogo from 'images/logo.png';
+import ContactUs from "components/ContactUs";
+
+import logo from "../../images/logo.png";
 
 // import UserMenu from 'components/UserMenu';
 // import AuthNavigation from 'components/AuthNavigation';
@@ -13,15 +15,14 @@ const Header = () => {
   return (
     <s.Header>
       <s.Container>
-        <p>fdfddvvdcvdvd</p>
-        {/* <>
-          <s.Logo to="/">
-            <img src={mainLogo} alt="News_logo" />
-          </s.Logo>
-          {isLoggedIn ? <s.Link to="/account">Account</s.Link> : null}
-        </>
-
-        {isLoggedIn ? <UserMenu /> : <AuthNavigation />} */}
+        <s.Logo to="/">
+          <s.Img src={logo} alt="logo" />
+        </s.Logo>
+        <s.Nav>
+          <s.Link to="/">Shop</s.Link>
+          <s.Link to="/shopping-cart">Shopping cart</s.Link>
+        </s.Nav>
+        <ContactUs />
       </s.Container>
     </s.Header>
   );

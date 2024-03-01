@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
-import { variables } from 'stylesheet/variables';
+import { variables } from "stylesheet/variables";
 
-export const Header = styled.div`
+export const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,35 +12,42 @@ export const Header = styled.div`
   box-shadow: 0 4px 4px ${variables.colors.boxShadow};
   border-radius: 0 0 10px 10px;
 
-  background: ${variables.colors.secondary};
+  background: #eee;
 `;
-
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 10px 20px;
-  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 767px;
 
   @media screen and (min-width: ${variables.breakpoints.tablet}) {
-    min-width: 576px;
-    width: auto;
-    max-width: 991px;
+    min-width: 768px;
   }
   @media screen and (min-width: ${variables.breakpoints.desktop}) {
-    min-width: 992px;
+    max-width: 1200px;
   }
 `;
 
 export const Logo = styled(NavLink)`
   display: flex;
-  width: 40px;
+  width: 70px;
   height: auto;
   gap: 5px;
 
   cursor: pointer;
 `;
+
+export const Img = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+export const Nav = styled.nav``;
 
 export const Link = styled(NavLink)`
   display: inline-block;
@@ -53,5 +60,6 @@ export const Link = styled(NavLink)`
   &.active,
   &:hover {
     color: ${variables.colors.tertiary};
+    text-decoration: underline;
   }
 `;
