@@ -1,13 +1,15 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-axios.defaults.baseURL = `http://localhost:3001`;
+const API = axios.create({
+  baseURL: `http://localhost:3001`,
+});
 
 export const getAllMedicines = createAsyncThunk(
-  "articles/getAllMedicines",
+  "medicines/getAllMedicines",
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get("/", {});
+      const response = await API.get("/", {});
 
       return response.data;
     } catch (e) {
@@ -17,10 +19,36 @@ export const getAllMedicines = createAsyncThunk(
 );
 
 export const getMedicinesByType = createAsyncThunk(
-  "articles/getMedicinesByType",
+  "medicines/getMedicinesByType",
   async (type, thunkAPI) => {
     try {
-      const response = await axios.get(`/${type}`);
+      const response = await API.get(`/type/${type}`);
+
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const getMedicinesByPrice = createAsyncThunk(
+  "medicines/getMedicinesByPrice",
+  async (priceDirection, thunkAPI) => {
+    try {
+      const response = await API.get(`/price/${priceDirection}`);
+
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const getMedicinesByName = createAsyncThunk(
+  "medicines/getMedicinesByName",
+  async ({ medicine }, thunkAPI) => {
+    try {
+      const response = await API.get(`/name/${medicine}`);
 
       return response.data;
     } catch (e) {

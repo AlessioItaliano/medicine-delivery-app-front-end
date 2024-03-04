@@ -34,16 +34,35 @@ export const Title = styled.h2`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
 
   width: 100%;
 `;
 
 export const Item = styled.li`
-  width: 100%;
+  // width: 100%;
 
   font-size: 15px;
   font-weight: 500;
 
   color: ${variables.colors.primary};
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 18px;
+
+  color: ${variables.colors.primary};
+  background: ${variables.colors.quinary};
+  border-radius: 18px;
+  border: 1px solid transparent;
 `;

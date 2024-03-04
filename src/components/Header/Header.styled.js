@@ -23,7 +23,7 @@ export const Container = styled.div`
   padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
-  // max-width: 767px;
+  max-width: 767px;
 
   @media screen and (min-width: ${variables.breakpoints.tablet}) {
     min-width: 768px;

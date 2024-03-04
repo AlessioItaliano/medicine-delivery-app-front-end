@@ -1,4 +1,5 @@
 import Section from "components/Section";
+import UserOrderInfo from "components/UserOrderInfo";
 // import SideBar from "components/SideBar";
 
 // import * as s from "./Shop/Shop.styled";
@@ -8,9 +9,8 @@ const ShoppingCart = () => {
   return (
     <>
       <Section>
-        <div>
-          <p>Shop cart</p>
-        </div>
+        <UserOrderInfo />
+
         {/* <s.Container>
           <SideBar />
           <ShopList />

@@ -20,8 +20,8 @@ const MenuAuth = () => {
     <s.Container>
       {!isLoggedIn ? (
         <>
-          <s.Link to="/auth/register">Register</s.Link>
-          <s.Link to="/auth/login">Log In</s.Link>
+          <s.Link to="/register">Register</s.Link>
+          <s.Link to="/login">Log In</s.Link>
         </>
       ) : (
         <>

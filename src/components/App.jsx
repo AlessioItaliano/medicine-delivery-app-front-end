@@ -1,15 +1,15 @@
 import { lazy, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import PrivateRoute from "./PrivateRoute";
 import RestrictedRoute from "./RestrictedRoute";
 
 import { refresh } from "../redux/auth/operations";
-// import { selectRefreshing } from "../redux/auth/selectors";
+import { selectIsRefreshing } from "../redux/auth/selectors";
 
 import Layout from "components/Layout";
-// import Loader from "components/Loader";
+import Loader from "components/Loader";
 
 const ShopPage = lazy(() => import("pages/Shop"));
 const ShoppingCartPage = lazy(() => import("pages/ShoppingCart"));
@@ -21,42 +21,34 @@ const CouponsPage = lazy(() => import("pages/Coupons"));
 const App = () => {
   const dispatch = useDispatch();
 
+  const isRefreshing = useSelector(selectIsRefreshing);
+
   useEffect(() => {
     dispatch(refresh());
   }, [dispatch]);
-  // const isRefreshing = useSelector(selectIsRefreshing);
-  // return isRefreshing ? (
-  // const dispatch = useDispatch();
 
-  // const isRefreshing = useSelector(selectRefreshing);
-
-  // useEffect(() => {
-  //   dispatch(refreshUser());
-  // }, [dispatch]);
-
-  return (
+  return isRefreshing ? (
+    <Loader />
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<ShopPage />} />
         <Route path="shopping-cart" element={<ShoppingCartPage />} />
         <Route
-          path="auth/login"
-          element={<RestrictedRoute redirectTo="auth" component={LoginPage} />}
+          path="/login"
+          element={<RestrictedRoute redirectTo="/" component={LoginPage} />}
         />
         <Route
-          path="auth/register"
-          element={
-            <RestrictedRoute redirectTo="auth" component={RegisterPage} />
-          }
+          path="/register"
+          element={<RestrictedRoute redirectTo="/" component={RegisterPage} />}
         />
-
         <Route
           path="history"
-          element={<PrivateRoute redirectTo="/login" component={HistoryPage} />}
+          element={<PrivateRoute redirectTo="/" component={HistoryPage} />}
         />
         <Route
           path="coupons"
-          element={<PrivateRoute redirectTo="/login" component={CouponsPage} />}
+          element={<PrivateRoute redirectTo="/" component={CouponsPage} />}
         />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>

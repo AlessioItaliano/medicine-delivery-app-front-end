@@ -25,12 +25,12 @@ export const Container = styled.div`
   margin-left: auto;
   // max-width: 767px;
 
-  @media screen and (min-width: ${variables.breakpoints.tablet}) {
-    min-width: 768px;
-  }
-  @media screen and (min-width: ${variables.breakpoints.desktop}) {
-    max-width: 1200px;
-  }
+  // @media screen and (min-width: ${variables.breakpoints.tablet}) {
+  //   min-width: 768px;
+  // }
+  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
+  //   max-width: 1200px;
+  // }
 `;
 
 export const Logo = styled(NavLink)`

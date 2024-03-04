@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
 import Header from "components/Header";
-// import Loader from 'components/Loader';
+import Loader from "components/Loader";
 
 import * as s from "./Layout.styled";
 
@@ -11,7 +11,7 @@ const Layout = () => {
     <>
       <Header />
       <s.Port>
-        <Suspense fallback={<p>Hello</p>}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </s.Port>

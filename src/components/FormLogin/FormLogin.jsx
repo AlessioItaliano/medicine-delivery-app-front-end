@@ -21,14 +21,14 @@ const FormLogin = () => {
   };
 
   return (
-    <s.Form onSubmit={handleSubmit} autoComplete="off">
+    <s.Form onSubmit={handleSubmit} autoComplete="on">
       <s.Label>
         Email
-        <s.Input type="email" name="email" autoComplete="off" />
+        <s.Input type="email" name="email" autoComplete="on" />
       </s.Label>
       <s.Label>
         Password
-        <s.Input type="password" name="password" autoComplete="off" />
+        <s.Input type="password" name="password" autoComplete="on" />
       </s.Label>
       <Button type={"submit"} name={"Log In"} />
     </s.Form>
