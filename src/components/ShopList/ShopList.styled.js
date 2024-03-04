@@ -7,6 +7,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 18px;
 
+  height: 80vh;
+  overflow-y: auto;
+
   padding: 15px;
   border-radius: 40px;
   background: radial-gradient(
@@ -21,3 +24,27 @@ export const Container = styled.div`
   //   align-items: end;
   // }
 `;
+
+export const List = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // flex-direction: column;
+  gap: 18px;
+
+  flex-wrap: wrap;
+  column-count: 1;
+
+  // margin-bottom: 30px;
+
+  // gap: 16px;
+
+  @media screen and (min-width: ${variables.breakpoints.tablet}) {
+    column-count: 2;
+  }
+  @media screen and (min-width: ${variables.breakpoints.desktop}) {
+    column-count: 3;
+  }
+`;
+
+export const Item = styled.li``;

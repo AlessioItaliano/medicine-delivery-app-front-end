@@ -1,11 +1,10 @@
 import * as s from "./Button.styled";
 
-const Button = () => {
+const Button = ({ func, name, type, btnSize }) => {
   return (
-    <>
-      <p>YAYYA</p>
-      <span>evveveve</span>
-    </>
+    <s.Button type={type} onClick={func} btnSize={btnSize}>
+      {name}
+    </s.Button>
   );
 };
 

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import noAvaibleImg from "../../images/NoPhotoAvailable.png";
+import noAvaibleImg from "../../images/noAvaibleImg.jpg";
 
 import { variables } from "stylesheet/variables";
 
-export const Container = styled.li`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -24,7 +24,7 @@ export const Container = styled.li`
   }
 `;
 
-export const ImgBox = styled.div`
+export const ImageContainer = styled.div`
   width: 100%;
   padding-top: 60%;
   position: relative;

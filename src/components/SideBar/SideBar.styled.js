@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 import { variables } from "../../stylesheet/variables";
 
-export const Container = styled.aside`
+export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 18px;
+  height: 80vh;
 
-  padding: 15px;
+  padding: 30px;
   border-radius: 40px;
   background: radial-gradient(
     circle farthest-corner at 10% 20%,
@@ -20,4 +22,28 @@ export const Container = styled.aside`
   //   justify-content: center;
   //   align-items: end;
   // }
+`;
+
+export const Title = styled.h2`
+  font-size: 22px;
+  font-weight: 500;
+
+  color: ${variables.colors.secondary};
+`;
+
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  width: 100%;
+`;
+
+export const Item = styled.li`
+  width: 100%;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: ${variables.colors.primary};
 `;

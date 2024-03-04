@@ -9,6 +9,8 @@ import logo from "../../images/logo.png";
 // import AuthNavigation from 'components/AuthNavigation';
 
 import * as s from "./Header.styled";
+import MenuNav from "components/MenuNav";
+import MenuAuth from "components/MenuAuth";
 
 const Header = () => {
   // const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -18,11 +20,9 @@ const Header = () => {
         <s.Logo to="/">
           <s.Img src={logo} alt="logo" />
         </s.Logo>
-        <s.Nav>
-          <s.Link to="/">Shop</s.Link>
-          <s.Link to="/shopping-cart">Shopping cart</s.Link>
-        </s.Nav>
+        <MenuNav />
         <ContactUs />
+        <MenuAuth />
       </s.Container>
     </s.Header>
   );

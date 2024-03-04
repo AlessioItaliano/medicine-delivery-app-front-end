@@ -63,3 +63,8 @@ export const Link = styled(NavLink)`
     text-decoration: underline;
   }
 `;
+
+export const UserName = styled.p`
+  font-size: 16px;
+  font-weight: 700;
+`;

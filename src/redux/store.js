@@ -11,16 +11,16 @@ import {
   REGISTER,
 } from "redux-persist";
 
-// import { articlesReducer } from "./articles/slice";
-// import { authReducer } from "./auth/slice";
+import { medicinesReducer } from "./medicines/slice";
+import { authReducer } from "./auth/slice";
 // import { favoriteReducer } from "./favorites/slice";
 // import { userArticlesReducer } from "./userArticles/slice";
 
 export const store = configureStore({
   devTools: true,
   reducer: {
-    // auth: authReducer,
-    // articles: articlesReducer,
+    auth: authReducer,
+    medicines: medicinesReducer,
     // favorite: favoriteReducer,
     // userArticles: userArticlesReducer,
   },
