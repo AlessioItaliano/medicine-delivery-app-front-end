@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { getCoupons } from "./operation";
+import { getCouponById, getCoupons } from "./operation";
 
 const initialState = {
   coupons: [],
+  discount: {},
   isLoading: false,
   error: null,
 };
@@ -23,6 +24,18 @@ export const couponsSlice = createSlice({
         state.coupons = action.payload;
       })
       .addCase(getCoupons.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+      .addCase(getCouponById.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getCouponById.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.discount = action.payload;
+      })
+      .addCase(getCouponById.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });

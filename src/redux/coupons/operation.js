@@ -17,3 +17,15 @@ export const getCoupons = createAsyncThunk(
     }
   }
 );
+
+export const getCouponById = createAsyncThunk(
+  "coupons/getCouponById",
+  async (couponId, thunkAPI) => {
+    try {
+      const response = await API.get(`/coupons/${couponId}`);
+      return response.data.discount;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
