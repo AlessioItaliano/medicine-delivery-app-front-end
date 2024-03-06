@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromOrders } from "../../redux/order/slice";
 import { selectOrders } from "../../redux/order/selectors";
@@ -16,9 +16,9 @@ const UserOrderItem = ({ orderMedicine, itemTotalPrice }) => {
 
   console.log(totalPrice);
 
-  useEffect(() => {
-    itemTotalPrice(price);
-  }, [quantity]);
+  // useEffect(() => {
+  //   itemTotalPrice(price);
+  // }, [quantity]);
 
   const handleQuantityChange = (e) => {
     const newQuantity = parseInt(e.target.value);

@@ -27,5 +27,6 @@ export const Button = styled.button`
   &:active {
     background: ${variables.colors.secondary};
     color: ${variables.colors.accent};
+    border-color: ${variables.colors.accent};
   }
 `;
