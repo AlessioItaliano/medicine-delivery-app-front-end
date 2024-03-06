@@ -21,7 +21,7 @@ export const ordersSlice = createSlice({
     },
     removeFromOrders: (state, action) => {
       state.orders = state.orders.filter(
-        (order) => order.id !== action.payload.id
+        (order) => order._id !== action.payload._id
       );
     },
   },

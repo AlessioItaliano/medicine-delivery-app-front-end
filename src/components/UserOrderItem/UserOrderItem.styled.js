@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import noAvaibleImg from "../../images/noAvaibleImg.jpg";
+import noAvaibleImg from "../../images/noAvaibleImg.png";
 
 import { variables } from "stylesheet/variables";
 

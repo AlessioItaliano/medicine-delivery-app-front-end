@@ -5,16 +5,16 @@ import { selectOrders } from "../../redux/order/selectors";
 import Button from "components/Button/Button";
 import * as s from "./UserOrderItem.styled";
 
-const UserOrderItem = ({ orderMedicine, itemTotalPrice }) => {
+const UserOrderItem = ({ orderMedicine }) => {
   const dispatch = useDispatch();
   const orders = useSelector(selectOrders);
 
   const { urlToImage, name, price, _id } = orderMedicine;
 
   const [quantity, setQuantity] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(price);
+  // const [totalPrice, setTotalPrice] = useState(price);
 
-  console.log(totalPrice);
+  // console.log(totalPrice);
 
   // useEffect(() => {
   //   itemTotalPrice(price);
@@ -23,16 +23,18 @@ const UserOrderItem = ({ orderMedicine, itemTotalPrice }) => {
   const handleQuantityChange = (e) => {
     const newQuantity = parseInt(e.target.value);
     setQuantity(newQuantity);
-    setTotalPrice(newQuantity * price);
+    // setTotalPrice(newQuantity * price);
   };
 
   const handleRemove = () => {
-    const index = orders.findIndex((order) => order._id === _id);
-    if (index !== -1) {
-      const removedOrder = orders[index];
-      const removedTotalPrice = removedOrder.price * removedOrder.quantity;
-      itemTotalPrice(-removedTotalPrice);
-      dispatch(removeFromOrders(removedOrder));
+    if (orders.some((order) => order._id === _id)) {
+      console.log(orders.some((order) => order._id === _id));
+      // dispatch(addToOrders(medicine));
+      // }
+      // Створюємо новий масив, який не містить видаляється елемент
+      // const updatedOrders = orders.filter((order) => order._id !== _id);
+      // Оновлюємо стейт orders за допомогою нового масиву
+      dispatch(removeFromOrders(orderMedicine));
     }
   };
 
