@@ -8,11 +8,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 10px;
 
-  padding: 10px;
-  min-width: 260px;
-  height: 426px;
-  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
 
   background-color: ${variables.colors.secondary};
 
@@ -48,46 +49,36 @@ export const Image = styled.img`
 `;
 
 export const Name = styled.p`
-  flex-grow: 1;
-
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
 
   color: ${variables.colors.primary};
 `;
 
 export const Description = styled.p`
-  flex-grow: 1;
-
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
 
   color: ${variables.colors.primary};
 `;
 
 export const Price = styled.p`
-  flex-grow: 1;
-
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
 
   color: ${variables.colors.primary};
 `;
 
 export const Type = styled.p`
-  flex-grow: 1;
-
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
 
   color: ${variables.colors.primary};
 `;
 
 export const Made = styled.p`
-  flex-grow: 1;
-
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
 
   color: ${variables.colors.primary};
 `;

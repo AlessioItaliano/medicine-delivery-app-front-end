@@ -9,7 +9,9 @@ const ShopItem = ({ medicine }) => {
   const dispatch = useDispatch();
   const orders = useSelector(selectOrders);
 
-  const { urlToImage, name, description, made, type, price, _id } = medicine;
+  const { urlToImage, name, description, made, price, _id } = medicine;
+
+  console.log(medicine);
 
   const handleAdd = () => {
     if (!orders.some((order) => order._id === _id)) {
@@ -24,9 +26,8 @@ const ShopItem = ({ medicine }) => {
       </s.ImageContainer>
       <s.Name>{name}</s.Name>
       <s.Description>{description}</s.Description>
-      <s.Made>{made}</s.Made>
-      <s.Type>{type}</s.Type>
-      <s.Price>{price}</s.Price>
+      <s.Made>Contry: {made}</s.Made>
+      <s.Price>Price: {price}</s.Price>
       <Button func={handleAdd} name="Add" type="button" />
     </s.Container>
   );
