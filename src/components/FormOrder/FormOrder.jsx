@@ -14,7 +14,7 @@ const FormOrder = ({ address }) => {
 
   const [addressInputValue, setAddressInputValue] = useState("");
   const [email, setEmail] = useState(user.email || "");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState(user.phone || "");
   const [name, setName] = useState(user.name || "");
 
   useEffect(() => {
@@ -79,6 +79,7 @@ const FormOrder = ({ address }) => {
           defaultCountry="UA"
           value={phone}
           onChange={handlePhoneChange}
+          maxLength={16}
         />
       </s.Label>
       <s.Label>
@@ -89,6 +90,7 @@ const FormOrder = ({ address }) => {
           autoComplete="on"
           value={name}
           onChange={handleNameChange}
+          placeholder="Your name"
         />
       </s.Label>
     </s.Form>

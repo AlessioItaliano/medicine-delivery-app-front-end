@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { variables } from "stylesheet/variables";
-
 import PhoneInput from "react-phone-number-input";
+
+import { variables } from "stylesheet/variables";
 
 export const Form = styled.form`
   display: flex;

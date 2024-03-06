@@ -1,12 +1,18 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 
 import Button from "components/Button";
-
+import "react-phone-number-input/style.css";
 import * as s from "./FormRegister.styled";
 
 const FormRegister = () => {
   const dispatch = useDispatch();
+  const [phone, setPhone] = useState("");
+
+  const handlePhoneChange = (value) => {
+    setPhone(value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +23,7 @@ const FormRegister = () => {
         name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
+        phone: phone,
       })
     );
     form.reset();
@@ -27,6 +34,17 @@ const FormRegister = () => {
       <s.Label>
         Username
         <s.Input type="text" name="name" required autoComplete="on" />
+      </s.Label>
+      <s.Label>
+        Phone
+        <s.InputPhone
+          international
+          defaultCountry="UA"
+          name="phone"
+          value={phone}
+          onChange={handlePhoneChange}
+          maxLength={16}
+        />
       </s.Label>
       <s.Label>
         Email

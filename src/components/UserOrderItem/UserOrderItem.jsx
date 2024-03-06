@@ -43,7 +43,7 @@ const UserOrderItem = ({ orderMedicine, itemTotalPrice }) => {
       </s.ImageContainer>
       <s.DescriptionContainer>
         <s.Name>{name}</s.Name>
-        <s.Price>Price: {price}</s.Price>
+        <s.Price>Price: {price} $</s.Price>
         <s.Input
           type="number"
           name="quantity"
