@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { variables } from 'stylesheet/variables';
+import { variables } from "stylesheet/variables";
+
+import PhoneInput from "react-phone-number-input";
 
 export const Form = styled.form`
   display: flex;
@@ -17,7 +19,7 @@ export const Label = styled.label`
   font-weight: 500;
 `;
 
-export const Input = styled.input`
+export const InputItem = styled.input`
   width: 350px;
   padding: 18px 20px;
   font-size: 18px;
@@ -26,4 +28,24 @@ export const Input = styled.input`
   background: ${variables.colors.quinary};
   border-radius: 18px;
   border: 1px solid transparent;
+`;
+
+export const InputPhone = styled(PhoneInput)`
+  width: 350px;
+  padding: 18px 20px;
+  font-size: 18px;
+
+  color: ${variables.colors.primary};
+  background-color: ${variables.colors.quinary};
+  border-radius: 18px;
+  border: 1px solid transparent;
+
+  & input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    font-size: 18px;
+  }
 `;

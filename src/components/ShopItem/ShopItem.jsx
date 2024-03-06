@@ -1,12 +1,22 @@
+import { useDispatch, useSelector } from "react-redux";
+import { addToOrders } from "../../redux/order/slice";
+import { selectOrders } from "../../redux/order/selectors";
+
 import Button from "components/Button/Button";
 import * as s from "./ShopItem.styled";
 
 const ShopItem = ({ medicine }) => {
-  const { urlToImage, name, description, made, type, price } = medicine;
+  const dispatch = useDispatch();
+  const orders = useSelector(selectOrders);
 
-  const handleClick = () => {
-    console.log("click");
+  const { urlToImage, name, description, made, type, price, _id } = medicine;
+
+  const handleAdd = () => {
+    if (!orders.some((order) => order._id === _id)) {
+      dispatch(addToOrders(medicine));
+    }
   };
+
   return (
     <s.Container>
       <s.ImageContainer>
@@ -17,7 +27,7 @@ const ShopItem = ({ medicine }) => {
       <s.Made>{made}</s.Made>
       <s.Type>{type}</s.Type>
       <s.Price>{price}</s.Price>
-      <Button func={handleClick} name="Add" type="button" />
+      <Button func={handleAdd} name="Add" type="button" />
     </s.Container>
   );
 };

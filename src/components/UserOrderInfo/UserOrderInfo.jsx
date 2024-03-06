@@ -1,35 +1,22 @@
-// import { useDispatch } from "react-redux";
-
-// import {
-//   getMedicinesByType,
-//   getMedicinesByPrice,
-//   getMedicinesByName,
-// } from "../../redux/medicines/operation";
-
-// import Button from "components/Button";
+import React, { useState } from "react";
+import Map from "components/Map";
+import FormOrder from "components/FormOrder";
+import fetchAddressFromCoordinates from "./coordinatesChange";
 
 import * as s from "./UserOrderInfo.styled";
-import FormOrder from "components/FormOrder";
-import MapWithSearch from "../Map/Map";
 
 const UserOrderInfo = () => {
-  // const dispatch = useDispatch();
+  const [address, setAddress] = useState(null);
 
-  // const handleFindByName = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   console.log(form.elements.medicine.value);
+  const handleCoordinatesChange = async (newCoordinates) => {
+    const getAddress = await fetchAddressFromCoordinates(newCoordinates);
+    setAddress(getAddress);
+  };
 
-  //   dispatch(
-  //     getMedicinesByName({
-  //       medicine: form.elements.medicine.value,
-  //     })
-  //   );
-  // };
   return (
     <s.Container>
-      <MapWithSearch />
-      <FormOrder />
+      <Map onCoordinatesChange={handleCoordinatesChange} />
+      <FormOrder address={address} />
     </s.Container>
   );
 };

@@ -1,66 +1,62 @@
-import React, { useState } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import { useState, useEffect } from "react";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import Loader from "components/Loader";
 
-const MapWithSearch = (props) => {
-  const [searchInput, setSearchInput] = useState("");
-  const [markerPosition, setMarkerPosition] = useState(null);
+const Map = ({ onCoordinatesChange }) => {
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyAGBDc2zDC74VOpsc7V38JMFe2uZvMrnnM",
+  });
 
-  const handlePlaceChanged = () => {
-    const { google } = props;
-    const autocomplete = new google.maps.places.Autocomplete(
-      document.getElementById("locationInput")
-    );
-    autocomplete.addListener("place_changed", () => {
-      const place = autocomplete.getPlace();
-      if (place.geometry) {
-        setMarkerPosition({
-          lat: place.geometry.location.lat(),
-          lng: place.geometry.location.lng(),
-        });
-      }
-    });
+  const [currentPosition, setCurrentPosition] = useState(null);
+  const [hasLoadedPosition, setHasLoadedPosition] = useState(false);
+
+  useEffect(() => {
+    if (!hasLoadedPosition && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const userPosition = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          setCurrentPosition(userPosition);
+          onCoordinatesChange(userPosition);
+          setHasLoadedPosition(true);
+        },
+        (error) => {
+          console.error("Error getting current position:", error);
+        }
+      );
+    }
+  }, [hasLoadedPosition, onCoordinatesChange]);
+
+  const handleMarkerDragEnd = (e) => {
+    const newCoordinates = {
+      lat: e.latLng.lat(),
+      lng: e.latLng.lng(),
+    };
+    setCurrentPosition(newCoordinates);
+    onCoordinatesChange(newCoordinates);
   };
 
-  const handleMapClick = (mapProps, map, clickEvent) => {
-    const { latLng } = clickEvent;
-    const { google } = props;
-    const geocoder = new google.maps.Geocoder();
-    geocoder.geocode({ location: latLng }, (results, status) => {
-      if (status === "OK" && results[0]) {
-        setSearchInput(results[0].formatted_address);
-        setMarkerPosition({
-          lat: latLng.lat(),
-          lng: latLng.lng(),
-        });
-      }
-    });
-  };
-
-  return (
-    <div>
-      <input
-        id="locationInput"
-        type="text"
-        value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
-        placeholder="Введіть назву місця"
-        onBlur={handlePlaceChanged}
-      />
-      <Map
-        google={props.google}
-        onClick={handleMapClick}
-        initialCenter={{
-          lat: 0,
-          lng: 0,
-        }}
-        zoom={12}
-      >
-        {markerPosition && <Marker position={markerPosition} />}
-      </Map>
-    </div>
+  return !isLoaded ? (
+    <Loader />
+  ) : (
+    <GoogleMap
+      mapContainerStyle={{ width: "400px", height: "400px" }}
+      zoom={17}
+      center={currentPosition}
+    >
+      {currentPosition !== null && (
+        <Marker
+          position={currentPosition}
+          title="Your Location"
+          draggable={true}
+          onDragEnd={handleMarkerDragEnd}
+        />
+      )}
+    </GoogleMap>
   );
 };
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyAGBDc2zDC74VOpsc7V38JMFe2uZvMrnnM",
-})(MapWithSearch);
+export default Map;

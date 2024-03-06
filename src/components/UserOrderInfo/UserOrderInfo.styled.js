@@ -24,6 +24,11 @@ export const Container = styled.div`
   // }
 `;
 
+export const Box = styled.div`
+  width: 400px;
+  height: 400px;
+`;
+
 // export const Title = styled.h2`
 //   font-size: 22px;
 //   font-weight: 500;
