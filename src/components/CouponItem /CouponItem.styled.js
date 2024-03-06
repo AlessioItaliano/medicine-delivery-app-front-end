@@ -16,13 +16,6 @@ export const Container = styled.div`
   border-radius: 30px;
 
   background-color: ${variables.colors.secondary};
-
-  // @media screen and (min-width: ${variables.breakpoints.tablet}) {
-  //   width: 260px;
-  // }
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   width: 306px;
-  // }
 `;
 
 export const ImageContainer = styled.div`
@@ -57,27 +50,11 @@ export const DescriptionContainer = styled.div`
   text-align: center;
 `;
 
-export const Name = styled.p`
+export const Description = styled.p`
   font-size: 24px;
   font-weight: 700;
 
   color: ${variables.colors.primary};
 `;
 
-export const Price = styled.p`
-  font-size: 16px;
-  font-weight: 500;
 
-  color: ${variables.colors.primary};
-`;
-
-export const Input = styled.input`
-  width: 100%;
-  padding: 18px 20px;
-  font-size: 18px;
-
-  color: ${variables.colors.primary};
-  background: ${variables.colors.quinary};
-  border-radius: 18px;
-  border: 1px solid transparent;
-`;

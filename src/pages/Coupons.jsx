@@ -1,3 +1,4 @@
+import CouponList from "components/CouponList ";
 import Section from "components/Section";
 // import SideBar from "components/SideBar";
 
@@ -8,11 +9,7 @@ const Coupons = () => {
   return (
     <>
       <Section>
-        {/* <s.Container> */}
-        <p>Coupons</p>
-        {/* <SideBar />
-          <ShopList /> */}
-        {/* </s.Container> */}
+        <CouponList />
       </Section>
     </>
   );

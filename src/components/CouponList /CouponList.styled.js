@@ -29,16 +29,23 @@ export const Container = styled.div`
 
 export const List = styled.ul`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 18px;
 
-  width: 100%;
+  flex-wrap: wrap;
+  column-count: 1;
+
+  @media screen and (min-width: ${variables.breakpoints.tablet}) {
+    column-count: 2;
+  }
+  @media screen and (min-width: ${variables.breakpoints.desktop}) {
+    column-count: 3;
+  }
 `;
 
 export const Item = styled.li`
-  width: 100%;
-  flex-grow: 1;
+  width: 500px;
   color: ${variables.colors.primary};
 `;
 

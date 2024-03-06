@@ -21,3 +21,27 @@ export const Title = styled.h2`
 
   color: ${variables.colors.primary};
 `;
+
+export const DiscountContainer = styled.div`
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const Input = styled.input`
+  width: 350px;
+  padding: 18px 20px;
+  font-size: 18px;
+
+  color: ${variables.colors.primary};
+  background: ${variables.colors.quinary};
+  border-radius: 18px;
+  border: 1px solid transparent;
+`;

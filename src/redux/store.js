@@ -15,6 +15,7 @@ import { medicinesReducer } from "./medicines/slice";
 import { authReducer } from "./auth/slice";
 // import { favoriteReducer } from "./favorites/slice";
 import { ordersReducer } from "./order/slice";
+import { couponsReducer } from "./coupons/slice";
 
 export const store = configureStore({
   devTools: true,
@@ -23,6 +24,7 @@ export const store = configureStore({
     medicines: medicinesReducer,
     // favorite: favoriteReducer,
     orders: ordersReducer,
+    coupons: couponsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

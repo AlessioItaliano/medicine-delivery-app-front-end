@@ -29,4 +29,11 @@ export const Button = styled.button`
     color: ${variables.colors.accent};
     border-color: ${variables.colors.accent};
   }
+
+  &:disabled {
+    cursor: auto;
+    background: ${variables.colors.secondary};
+    color: ${variables.colors.primary};
+    border-color: ${variables.colors.primary};
+  }
 `;
