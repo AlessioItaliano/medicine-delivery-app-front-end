@@ -13,16 +13,9 @@ const UserOrderItem = ({ orderMedicine, updateTotalPrice }) => {
 
   const [quantity, setQuantity] = useState(1);
 
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  console.log(quantity);
-
-  console.log(price);
-
   useEffect(() => {
-    setTotalPrice(price * quantity);
     updateTotalPrice(price * quantity);
-  }, [quantity]);
+  }, [quantity, updateTotalPrice, price]);
 
   const handleQuantityChange = (e) => {
     const newQuantity = parseInt(e.target.value);

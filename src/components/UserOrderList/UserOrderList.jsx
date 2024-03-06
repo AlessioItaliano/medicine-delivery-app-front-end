@@ -11,7 +11,7 @@ const UserOrderList = ({ shopingTotalPrice }) => {
 
   useEffect(() => {
     shopingTotalPrice(totalPrice);
-  }, [totalPrice]);
+  }, [totalPrice, shopingTotalPrice]);
 
   const updateTotalPrice = (newPrice) => {
     setTotalPrice((prevTotalPrice) => {

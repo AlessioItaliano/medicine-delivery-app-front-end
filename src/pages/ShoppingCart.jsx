@@ -51,7 +51,6 @@ const ShoppingCart = () => {
               <Button name="Read" type="submit" />
             </s.Form>
           </s.DiscountContainer>
-
           <s.Title>Total price: {price} $</s.Title>
           <Button name="Submit" type="submit" func={onSubmitOrder}></Button>
         </s.SubmitContainer>
