@@ -2,7 +2,7 @@
 
 Gretings and welcome on my news website!
 
-![MainPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readme/MainPage.png)
+![MainPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readMe/MainPage.png)
 
 # About Website
 
@@ -12,20 +12,20 @@ The site consists of a home page, authorization pages, shopping page, history, a
 
 ## Shopping Page
 
-![ShoppingPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readme/ShoppingPage.png)
+![ShoppingPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readMe/ShoppingPage.png)
 
 Accessible and user-friendly functionality. You can select your location on the map and have it automatically inserted into the address field. The phone number field is designed to comfortably accommodate any phone number in the world. The section responsible for selected items allows you to choose the desired quantity, delete items, and apply personal discounts.
 With just one click, your request is on its way!
 
 ## History Page
 
-![HistoryPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readme/HistoryPage.png)
+![HistoryPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readMe/HistoryPage.png)
 
 We don't forget anything! That's right, all the items you've purchased on the website are stored in our database so that you can conveniently view them whenever you like.
 
 ## Discount Page
 
-![DiscountPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readme/DiscountPage.png)
+![DiscountPage](https://github.com/AlessioItaliano/medicine-delivery-app-front-end/blob/main/public/readMe/DiscountPage.png)
 
 For our beloved regular customers, a section with discounts has been created, allowing you to save a lot! So, register now and get the best offers!
 
