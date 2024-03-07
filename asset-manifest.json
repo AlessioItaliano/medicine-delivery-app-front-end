@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/medicine-delivery-app-front-end/static/css/main.a7364a53.css",
-    "main.js": "/medicine-delivery-app-front-end/static/js/main.c1bd4428.js",
-    "static/js/545.26441f6b.chunk.js": "/medicine-delivery-app-front-end/static/js/545.26441f6b.chunk.js",
+    "main.js": "/medicine-delivery-app-front-end/static/js/main.cdf1cabe.js",
+    "static/js/545.a47a53f3.chunk.js": "/medicine-delivery-app-front-end/static/js/545.a47a53f3.chunk.js",
     "static/css/216.8be46708.chunk.css": "/medicine-delivery-app-front-end/static/css/216.8be46708.chunk.css",
-    "static/js/216.c6232928.chunk.js": "/medicine-delivery-app-front-end/static/js/216.c6232928.chunk.js",
+    "static/js/216.c48bb19d.chunk.js": "/medicine-delivery-app-front-end/static/js/216.c48bb19d.chunk.js",
     "static/js/591.c700df85.chunk.js": "/medicine-delivery-app-front-end/static/js/591.c700df85.chunk.js",
     "static/css/152.8be46708.chunk.css": "/medicine-delivery-app-front-end/static/css/152.8be46708.chunk.css",
     "static/js/152.c45316f8.chunk.js": "/medicine-delivery-app-front-end/static/js/152.c45316f8.chunk.js",
-    "static/js/461.4579b4a3.chunk.js": "/medicine-delivery-app-front-end/static/js/461.4579b4a3.chunk.js",
-    "static/js/436.908fc85b.chunk.js": "/medicine-delivery-app-front-end/static/js/436.908fc85b.chunk.js",
+    "static/js/461.7715a1fe.chunk.js": "/medicine-delivery-app-front-end/static/js/461.7715a1fe.chunk.js",
+    "static/js/436.684ab7e3.chunk.js": "/medicine-delivery-app-front-end/static/js/436.684ab7e3.chunk.js",
     "static/js/81.c3836f9a.chunk.js": "/medicine-delivery-app-front-end/static/js/81.c3836f9a.chunk.js",
     "static/js/121.a1d6b34d.chunk.js": "/medicine-delivery-app-front-end/static/js/121.a1d6b34d.chunk.js",
     "static/js/942.b69e177e.chunk.js": "/medicine-delivery-app-front-end/static/js/942.b69e177e.chunk.js",
@@ -17,21 +17,21 @@
     "static/media/logo.png": "/medicine-delivery-app-front-end/static/media/logo.f3ef6d2f6f9258bbd243.png",
     "index.html": "/medicine-delivery-app-front-end/index.html",
     "main.a7364a53.css.map": "/medicine-delivery-app-front-end/static/css/main.a7364a53.css.map",
-    "main.c1bd4428.js.map": "/medicine-delivery-app-front-end/static/js/main.c1bd4428.js.map",
-    "545.26441f6b.chunk.js.map": "/medicine-delivery-app-front-end/static/js/545.26441f6b.chunk.js.map",
+    "main.cdf1cabe.js.map": "/medicine-delivery-app-front-end/static/js/main.cdf1cabe.js.map",
+    "545.a47a53f3.chunk.js.map": "/medicine-delivery-app-front-end/static/js/545.a47a53f3.chunk.js.map",
     "216.8be46708.chunk.css.map": "/medicine-delivery-app-front-end/static/css/216.8be46708.chunk.css.map",
-    "216.c6232928.chunk.js.map": "/medicine-delivery-app-front-end/static/js/216.c6232928.chunk.js.map",
+    "216.c48bb19d.chunk.js.map": "/medicine-delivery-app-front-end/static/js/216.c48bb19d.chunk.js.map",
     "591.c700df85.chunk.js.map": "/medicine-delivery-app-front-end/static/js/591.c700df85.chunk.js.map",
     "152.8be46708.chunk.css.map": "/medicine-delivery-app-front-end/static/css/152.8be46708.chunk.css.map",
     "152.c45316f8.chunk.js.map": "/medicine-delivery-app-front-end/static/js/152.c45316f8.chunk.js.map",
-    "461.4579b4a3.chunk.js.map": "/medicine-delivery-app-front-end/static/js/461.4579b4a3.chunk.js.map",
-    "436.908fc85b.chunk.js.map": "/medicine-delivery-app-front-end/static/js/436.908fc85b.chunk.js.map",
+    "461.7715a1fe.chunk.js.map": "/medicine-delivery-app-front-end/static/js/461.7715a1fe.chunk.js.map",
+    "436.684ab7e3.chunk.js.map": "/medicine-delivery-app-front-end/static/js/436.684ab7e3.chunk.js.map",
     "81.c3836f9a.chunk.js.map": "/medicine-delivery-app-front-end/static/js/81.c3836f9a.chunk.js.map",
     "121.a1d6b34d.chunk.js.map": "/medicine-delivery-app-front-end/static/js/121.a1d6b34d.chunk.js.map",
     "942.b69e177e.chunk.js.map": "/medicine-delivery-app-front-end/static/js/942.b69e177e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a7364a53.css",
-    "static/js/main.c1bd4428.js"
+    "static/js/main.cdf1cabe.js"
   ]
 }
