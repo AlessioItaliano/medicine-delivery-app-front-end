@@ -38,8 +38,6 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   width: 100%;
-  // height: 250px;
-  // overflow: auto;
   color: ${variables.colors.primary};
 `;
 

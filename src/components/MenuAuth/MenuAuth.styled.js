@@ -14,23 +14,14 @@ export const Header = styled.header`
 
   background: #eee;
 `;
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  // max-width: 767px;
-
-  // @media screen and (min-width: ${variables.breakpoints.tablet}) {
-  //   min-width: 768px;
-  // }
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   max-width: 1200px;
-  // }
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 export const Logo = styled(NavLink)`

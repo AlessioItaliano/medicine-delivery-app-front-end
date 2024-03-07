@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-// import { useDispatch } from "react-redux";
-// import { login } from "../../redux/auth/operations";
-import { selectUser } from "../../redux/auth/selectors";
-// import Button from "components/Button";
-import "react-phone-number-input/style.css";
-// import PhoneInput from "react-phone-number-input";
 
+import { selectUser } from "../../redux/auth/selectors";
+
+import "react-phone-number-input/style.css";
 import * as s from "./FormOrder.styled";
 
 const FormOrder = ({ address }) => {
@@ -23,18 +20,6 @@ const FormOrder = ({ address }) => {
     }
   }, [address]);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   dispatch(
-  //     login({
-  //       email: form.elements.email.value,
-  //       password: form.elements.password.value,
-  //     })
-  //   );
-  //   form.reset();
-  // };
-
   const handleAddressInputChange = (e) => {
     setAddressInputValue(e.target.value);
   };
@@ -42,7 +27,6 @@ const FormOrder = ({ address }) => {
     setEmail(e.target.value);
   };
   const handlePhoneChange = (value) => {
-    // console.log(e.tarhet.value);
     setPhone(value);
   };
   const handleNameChange = (e) => {

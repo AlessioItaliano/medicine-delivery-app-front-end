@@ -7,18 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-  // padding: 5px 20px;
-  // width: 100%;
-
-  // @media screen and (min-width: ${variables.breakpoints.tablet}) {
-  //   min-width: 576px;
-  //   width: auto;
-  //   max-width: 991px;
-  // }
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   min-width: 992px;
-  // }
 `;
 
 export const Link = styled.a`

@@ -6,6 +6,7 @@ export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-aline: center;
   gap: 18px;
   height: 80vh;
 
@@ -16,12 +17,6 @@ export const Aside = styled.aside`
     rgba(37, 145, 251, 0.98) 0.1%,
     #000780 99.8%
   );
-
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   align-items: end;
-  // }
 `;
 
 export const Title = styled.h2`
@@ -33,16 +28,13 @@ export const Title = styled.h2`
 
 export const List = styled.ul`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 5px;
-
-  width: 100%;
+  flex-wrap: wrap;
 `;
 
 export const Item = styled.li`
-  // width: 100%;
-
   font-size: 15px;
   font-weight: 500;
 
@@ -65,4 +57,11 @@ export const Input = styled.input`
   background: ${variables.colors.quinary};
   border-radius: 18px;
   border: 1px solid transparent;
+`;
+
+export const PriceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 `;

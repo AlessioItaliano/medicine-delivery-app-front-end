@@ -16,13 +16,6 @@ export const Container = styled.div`
   border-radius: 30px;
 
   background-color: ${variables.colors.secondary};
-
-  // @media screen and (min-width: ${variables.breakpoints.tablet}) {
-  //   width: 260px;
-  // }
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   width: 306px;
-  // }
 `;
 
 export const ImageContainer = styled.div`

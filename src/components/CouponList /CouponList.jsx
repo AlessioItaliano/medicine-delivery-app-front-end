@@ -19,10 +19,6 @@ const CouponList = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
-  // console.log(coupons);
-  // console.log(isLoading);
-  // console.log(error);
-
   useEffect(() => {
     dispatch(getCoupons());
   }, [dispatch]);

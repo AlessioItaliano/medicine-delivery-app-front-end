@@ -91,16 +91,18 @@ const SideBar = () => {
         </s.Item>
       </s.List>
       <s.Title>Sort by price:</s.Title>
-      <Button
-        type="button"
-        name={"High to Low"}
-        func={() => handleSortByPrice("higt")}
-      />
-      <Button
-        type="button"
-        name={"Low to High"}
-        func={() => handleSortByPrice("low")}
-      />
+      <s.PriceContainer>
+        <Button
+          type="button"
+          name={"High to Low"}
+          func={() => handleSortByPrice("higt")}
+        />
+        <Button
+          type="button"
+          name={"Low to High"}
+          func={() => handleSortByPrice("low")}
+        />
+      </s.PriceContainer>
     </s.Aside>
   );
 };

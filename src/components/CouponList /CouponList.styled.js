@@ -19,12 +19,6 @@ export const Container = styled.div`
     rgba(37, 145, 251, 0.98) 0.1%,
     #000780 99.8%
   );
-
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   align-items: end;
-  // }
 `;
 
 export const List = styled.ul`

@@ -22,11 +22,7 @@ export const Title = styled.h2`
   color: ${variables.colors.primary};
 `;
 
-export const DiscountContainer = styled.div`
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-`;
+export const DiscountContainer = styled.div``;
 
 export const Form = styled.form`
   display: flex;

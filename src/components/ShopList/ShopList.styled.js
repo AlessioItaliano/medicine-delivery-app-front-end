@@ -17,27 +17,17 @@ export const Container = styled.div`
     rgba(37, 145, 251, 0.98) 0.1%,
     #000780 99.8%
   );
-
-  // @media screen and (min-width: ${variables.breakpoints.desktop}) {
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   align-items: end;
-  // }
 `;
 
 export const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  // flex-direction: column;
+
   gap: 18px;
 
   flex-wrap: wrap;
   column-count: 1;
-
-  // margin-bottom: 30px;
-
-  // gap: 16px;
 
   @media screen and (min-width: ${variables.breakpoints.tablet}) {
     column-count: 2;
