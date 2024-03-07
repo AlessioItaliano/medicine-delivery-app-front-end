@@ -13,7 +13,7 @@ import {
 
 import { medicinesReducer } from "./medicines/slice";
 import { authReducer } from "./auth/slice";
-// import { favoriteReducer } from "./favorites/slice";
+import { orderHistoryReducer } from "./orderHistory/slice";
 import { ordersReducer } from "./order/slice";
 import { couponsReducer } from "./coupons/slice";
 
@@ -22,7 +22,7 @@ export const store = configureStore({
   reducer: {
     auth: authReducer,
     medicines: medicinesReducer,
-    // favorite: favoriteReducer,
+    orderHistory: orderHistoryReducer,
     orders: ordersReducer,
     coupons: couponsReducer,
   },

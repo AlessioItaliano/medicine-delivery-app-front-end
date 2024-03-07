@@ -43,7 +43,7 @@ const Map = ({ onCoordinatesChange }) => {
     <Loader />
   ) : (
     <GoogleMap
-      mapContainerStyle={{ width: "400px", height: "400px" }}
+      mapContainerStyle={{ width: "300px", height: "300px" }}
       zoom={17}
       center={currentPosition}
     >

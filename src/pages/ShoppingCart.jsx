@@ -9,6 +9,8 @@ import Loader from "components/Loader";
 
 import { getCouponById } from "../redux/coupons/operation";
 import { selectDiscount, selectIsLoading } from "../redux/coupons/selectors";
+import { createOrder } from "../redux/orderHistory/operation";
+import { selectOrders } from "../redux/order/selectors";
 
 import * as s from "./ShoppingCart/ShoppingCart.styled";
 
@@ -17,28 +19,33 @@ const ShoppingCart = () => {
 
   const discount = useSelector(selectDiscount);
   const isLoading = useSelector(selectIsLoading);
-
-  console.log(discount);
+  const orders = useSelector(selectOrders);
 
   const [price, setPrice] = useState(0);
-  //   const [discountedPrice, setDiscountedPrice] = useState("");
+  const [discountPrice, setDiscountPrice] = useState(0);
 
   useEffect(() => {
-    if (discount !== null && discount !== undefined) {
-      console.log(price);
-      console.log(discount);
-      const calculatedDiscountedPrice = price - (price * discount) / 100;
-      console.log(calculatedDiscountedPrice);
-      setPrice(calculatedDiscountedPrice);
+    if (discount !== null && discount !== 0) {
+      const newPrice = price - (price * discount) / 100;
+      setDiscountPrice(newPrice);
     }
-  }, [discount, setPrice, price]);
+  }, [discount, setDiscountPrice, price]);
 
   const onSubmitOrder = (e) => {
     e.preventDefault();
+
+    const orderShopPrice = discountPrice ? discountPrice : price;
+    const orderShopList = orders.map((order) => order._id);
+
+    dispatch(
+      createOrder({
+        totalPrice: orderShopPrice,
+        orderList: orderShopList,
+      })
+    );
   };
 
   const shopingTotalPrice = (newPrice) => {
-    console.log(newPrice);
     setPrice(newPrice);
   };
 
@@ -74,8 +81,11 @@ const ShoppingCart = () => {
                 </s.Form>
               </s.DiscountContainer>
 
-              <s.Title>Total price: {price} $</s.Title>
-
+              {discountPrice ? (
+                <s.Title>Price with discount: {discountPrice} $</s.Title>
+              ) : (
+                <s.Title>Total price: {price} $</s.Title>
+              )}
               <Button name="Submit" type="submit" func={onSubmitOrder}></Button>
             </s.SubmitContainer>
           </Section>
