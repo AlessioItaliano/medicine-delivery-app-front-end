@@ -1,8 +1,8 @@
-import { Hourglass } from 'react-loader-spinner';
+import { Hourglass } from "react-loader-spinner";
 
-import * as s from './Loader.styled';
+import * as s from "./Loader.styled";
 
-import { variables } from 'stylesheet/variables';
+import { variables } from "stylesheet/variables";
 
 const Loader = () => {
   return (
@@ -15,8 +15,8 @@ const Loader = () => {
         wrapperStyle={{}}
         wrapperClass=""
         colors={[
-          `${variables.colors.tertiary}`,
-          `${variables.colors.quaternary}`,
+          `${variables.colors.accentHover}`,
+          `${variables.colors.accent}`,
         ]}
       />
     </s.LoaderStyle>

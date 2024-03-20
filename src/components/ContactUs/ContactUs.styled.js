@@ -4,9 +4,17 @@ import { variables } from "stylesheet/variables";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  width: 700px;
+`;
+
+export const AddressList = styled.ul``;
+
+export const AddressItem = styled.li`
+  cursor: pointer;
 `;
 
 export const Link = styled.a`
@@ -14,12 +22,15 @@ export const Link = styled.a`
   text-decoration: none;
   padding: 5px;
   font-weight: 500;
-  font-size: 10px;
-  color: ${variables.colors.primary};
+  font-size: 12px;
+
+  cursor: pointer;
+
+  color: ${variables.colors.secondary};
 
   &.active,
   &:hover {
-    color: ${variables.colors.tertiary};
+    color: ${variables.colors.accentHover};
   }
 `;
 
@@ -28,11 +39,26 @@ export const LinkToWebSite = styled.a`
   display: inline-block;
   padding: 5px;
   font-weight: 500;
-  font-size: 10px;
-  color: ${variables.colors.tertiary};
+  font-size: 12px;
+
+  cursor: pointer;
+
+  color: ${variables.colors.secondary};
 
   &.active,
   &:hover {
-    color: ${variables.colors.quaternary};
+    color: ${variables.colors.accentHover};
   }
+`;
+
+export const SocialsList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const SocialsItem = styled.li``;
+
+export const SocialsLink = styled.a`
+  cursor: pointer;
 `;

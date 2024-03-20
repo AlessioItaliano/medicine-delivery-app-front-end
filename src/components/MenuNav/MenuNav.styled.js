@@ -4,49 +4,10 @@ import { NavLink } from "react-router-dom";
 
 import { variables } from "stylesheet/variables";
 
-export const Header = styled.header`
+export const Nav = styled.nav`
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0 4px 4px ${variables.colors.boxShadow};
-  border-radius: 0 0 10px 10px;
-
-  background: #eee;
+  gap: 8px;
 `;
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media screen and (min-width: ${variables.breakpoints.tablet}) {
-    min-width: 768px;
-  }
-  @media screen and (min-width: ${variables.breakpoints.desktop}) {
-    max-width: 1200px;
-  }
-`;
-
-export const Logo = styled(NavLink)`
-  display: flex;
-  width: 70px;
-  height: auto;
-  gap: 5px;
-
-  cursor: pointer;
-`;
-
-export const Img = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
-export const Nav = styled.nav``;
 
 export const Link = styled(NavLink)`
   display: inline-block;
@@ -55,10 +16,28 @@ export const Link = styled(NavLink)`
   font-weight: 700;
   font-size: 16px;
   color: ${variables.colors.primary};
+  position: relative;
 
   &.active,
   &:hover {
-    color: ${variables.colors.tertiary};
-    text-decoration: underline;
+    color: ${variables.colors.accent};
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: ${variables.colors.accent};
+    transition: width 0.4s ease-in-out;
+  }
+
+  &.active::before,
+  &:hover::before {
+    width: 100%;
   }
 `;

@@ -10,12 +10,13 @@ export const Container = styled.div`
   gap: 18px;
   position: relative;
 
-  padding: 10px;
   width: 100%;
   height: auto;
-  border-radius: 30px;
 
-  background-color: ${variables.colors.secondary};
+  padding: 30px;
+  border-radius: 5px;
+  background: ${variables.colors.secondary};
+  box-shadow: ${variables.colors.boxShadowSecondary};
 `;
 
 export const ImageContainer = styled.div`
@@ -56,5 +57,3 @@ export const Description = styled.p`
 
   color: ${variables.colors.primary};
 `;
-
-

@@ -7,15 +7,16 @@ import { variables } from "stylesheet/variables";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 18px;
+  gap: 10px;
   position: relative;
 
   padding: 10px;
   width: 100%;
   height: auto;
-  border-radius: 30px;
 
-  background-color: ${variables.colors.secondary};
+  border-radius: 5px;
+  background: ${variables.colors.secondary};
+  box-shadow: ${variables.colors.boxShadowSecondary};
 `;
 
 export const ImageContainer = styled.div`
@@ -70,7 +71,8 @@ export const Input = styled.input`
   font-size: 18px;
 
   color: ${variables.colors.primary};
-  background: ${variables.colors.quinary};
-  border-radius: 18px;
-  border: 1px solid transparent;
+
+  border-radius: 3px;
+  border: 1px solid ${variables.colors.accent};
+  background: ${variables.colors.secondary};
 `;

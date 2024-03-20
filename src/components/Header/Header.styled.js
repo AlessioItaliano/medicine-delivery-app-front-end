@@ -12,24 +12,23 @@ export const Header = styled.header`
   box-shadow: 0 4px 4px ${variables.colors.boxShadow};
   border-radius: 0 0 10px 10px;
 
-  background: #eee;
+  background-color: ${variables.colors.bgHeader};
 `;
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 15px 75px;
+  width: 100%;
   max-width: 767px;
 
   @media screen and (min-width: ${variables.breakpoints.tablet}) {
     min-width: 768px;
   }
   @media screen and (min-width: ${variables.breakpoints.desktop}) {
-    max-width: 1200px;
+    max-width: 1440px;
   }
 `;
 

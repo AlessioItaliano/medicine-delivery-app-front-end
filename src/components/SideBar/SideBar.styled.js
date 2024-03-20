@@ -1,67 +1,44 @@
 import styled from "styled-components";
-
 import { variables } from "../../stylesheet/variables";
+import markerIcon from "../../icons/marker.svg";
 
 export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-aline: center;
   gap: 18px;
-  height: 80vh;
-
   padding: 30px;
-  border-radius: 40px;
-  background: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(37, 145, 251, 0.98) 0.1%,
-    #000780 99.8%
-  );
 `;
 
 export const Title = styled.h2`
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-
-  color: ${variables.colors.secondary};
+  color: ${variables.colors.primary};
 `;
 
 export const List = styled.ul`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   gap: 5px;
-  flex-wrap: wrap;
 `;
 
 export const Item = styled.li`
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
-
+  cursor: pointer;
+  padding-left: 5px;
+  margin-left: 20px;
   color: ${variables.colors.primary};
-`;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-`;
+  &:hover,
+  &:focus,
+  &.active {
+    color: ${variables.colors.accent};
+  }
 
-export const Input = styled.input`
-  width: 100%;
-  padding: 18px 20px;
-  font-size: 18px;
-
-  color: ${variables.colors.primary};
-  background: ${variables.colors.quinary};
-  border-radius: 18px;
-  border: 1px solid transparent;
-`;
-
-export const PriceContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
+  &:hover::marker,
+  &:focus::marker,
+  &.active::marker {
+    content: url(${markerIcon});
+    margin-left: 10px;
+  }
 `;

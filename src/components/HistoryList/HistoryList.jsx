@@ -19,13 +19,17 @@ const HistoryList = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
+  console.log(error);
+  console.log(isLoading);
+  console.log(orders);
+
   useEffect(() => {
     dispatch(getUserOrder());
   }, [dispatch]);
 
   return (
     <s.Container>
-      {isLoading && !error ? (
+      {orders.length === 0 || (isLoading && !error) ? (
         <s.EmptyContainer>
           <s.EmptyWarning>You don't have any history.</s.EmptyWarning>
         </s.EmptyContainer>

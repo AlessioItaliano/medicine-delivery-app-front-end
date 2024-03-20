@@ -1,38 +1,39 @@
 import styled from "styled-components";
 
-import { variables } from "stylesheet/variables";
+import { variables } from "../../stylesheet/variables";
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 18px;
-`;
-
-export const SubmitContainer = styled.div`
   display: flex;
-  gap: 50px;
-  justify-content: end;
+  // flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-aline: center;
+  gap: 18px;
+  height: 85px;
+
+  padding: 21px 75px;
+  // border-radius: 40px;
+  background-color: ${variables.colors.bgSecondary};
 `;
 
 export const Title = styled.h2`
-  font-size: 35px;
+  font-size: 22px;
   font-weight: 500;
 
-  color: ${variables.colors.primary};
+  color: ${variables.colors.secondary};
 `;
-
-export const DiscountContainer = styled.div``;
 
 export const Form = styled.form`
   display: flex;
-  justify-content: center;
+  // flex-direction: column;
   align-items: center;
   gap: 15px;
 `;
 
 export const Input = styled.input`
-  width: 350px;
+  width: 453px;
+  height: 40px;
+
   padding: 18px 20px;
   font-size: 18px;
 

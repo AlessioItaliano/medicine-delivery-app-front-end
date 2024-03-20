@@ -1,4 +1,7 @@
 import axios from "axios";
+
+import { Notify } from "notiflix";
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL =
@@ -22,8 +25,10 @@ export const getCouponById = createAsyncThunk(
   async (couponId, thunkAPI) => {
     try {
       const response = await axios.get(`/coupons/${couponId}`);
+      Notify.success("You have discount!");
       return response.data.discount;
     } catch (error) {
+      Notify.failure("Something went wrong... Try again!");
       return thunkAPI.rejectWithValue(error.message);
     }
   }

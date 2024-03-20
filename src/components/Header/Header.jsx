@@ -1,6 +1,6 @@
 import MenuNav from "components/MenuNav";
 import MenuAuth from "components/MenuAuth";
-import ContactUs from "components/ContactUs";
+// import ContactUs from "components/ContactUs";
 
 import logo from "../../images/logo.png";
 
@@ -14,7 +14,7 @@ const Header = () => {
           <s.Img src={logo} alt="logo" />
         </s.Logo>
         <MenuNav />
-        <ContactUs />
+        {/* <ContactUs /> */}
         <MenuAuth />
       </s.Container>
     </s.Header>

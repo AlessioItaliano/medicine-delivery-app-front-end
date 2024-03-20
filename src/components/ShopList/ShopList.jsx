@@ -30,17 +30,15 @@ const ShopList = () => {
       {isLoading && !error ? (
         <Loader />
       ) : (
-        <>
-          <s.Container>
-            <s.List>
-              {medicines.map((medicine) => (
-                <div key={medicine._id}>
-                  <ShopItem medicine={medicine} />
-                </div>
-              ))}
-            </s.List>
-          </s.Container>
-        </>
+        <s.Container>
+          <s.List>
+            {medicines.map((medicine) => (
+              <div key={medicine._id}>
+                <ShopItem medicine={medicine} />
+              </div>
+            ))}
+          </s.List>
+        </s.Container>
       )}
     </>
   );

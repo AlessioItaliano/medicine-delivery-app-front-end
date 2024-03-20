@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Map from "components/Map";
 import FormOrder from "components/FormOrder";
 import fetchAddressFromCoordinates from "./coordinatesChange";

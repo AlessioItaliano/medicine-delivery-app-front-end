@@ -21,17 +21,23 @@ const FormLogin = () => {
   };
 
   return (
-    <s.Form onSubmit={handleSubmit} autoComplete="on">
-      <s.Label>
-        Email
-        <s.Input type="email" name="email" autoComplete="on" />
-      </s.Label>
-      <s.Label>
-        Password
-        <s.Input type="password" name="password" autoComplete="on" />
-      </s.Label>
-      <Button type={"submit"} name={"Log In"} />
-    </s.Form>
+    <s.Container>
+      <s.Title>Log in</s.Title>
+      <s.Form onSubmit={handleSubmit} autoComplete="on">
+        <s.Label>
+          Email
+          <s.Input type="email" name="email" autoComplete="on" />
+        </s.Label>
+        <s.Label>
+          Password
+          <s.Input type="password" name="password" autoComplete="on" />
+        </s.Label>
+        <s.Redirect>
+          Don't have an account yet, <s.Link to="/register">Register</s.Link>
+        </s.Redirect>
+        <Button type={"submit"} name={"Log In"} />
+      </s.Form>
+    </s.Container>
   );
 };
 

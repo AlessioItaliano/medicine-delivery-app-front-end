@@ -30,32 +30,38 @@ const FormRegister = () => {
   };
 
   return (
-    <s.Form onSubmit={handleSubmit} autoComplete="on">
-      <s.Label>
-        Username
-        <s.Input type="text" name="name" required autoComplete="on" />
-      </s.Label>
-      <s.Label>
-        Phone
-        <s.InputPhone
-          international
-          defaultCountry="UA"
-          name="phone"
-          value={phone}
-          onChange={handlePhoneChange}
-          maxLength={16}
-        />
-      </s.Label>
-      <s.Label>
-        Email
-        <s.Input type="email" name="email" required autoComplete="on" />
-      </s.Label>
-      <s.Label>
-        Password
-        <s.Input type="password" name="password" required autoComplete="on" />
-      </s.Label>
-      <Button type={"submit"} name={"Register"} />
-    </s.Form>
+    <s.Container>
+      <s.Title>Sign up</s.Title>
+      <s.Form onSubmit={handleSubmit} autoComplete="on">
+        <s.Label>
+          Username
+          <s.Input type="text" name="name" required autoComplete="on" />
+        </s.Label>
+        <s.Label>
+          Phone
+          <s.InputPhone
+            international
+            defaultCountry="UA"
+            name="phone"
+            value={phone}
+            onChange={handlePhoneChange}
+            maxLength={16}
+          />
+        </s.Label>
+        <s.Label>
+          Email
+          <s.Input type="email" name="email" required autoComplete="on" />
+        </s.Label>
+        <s.Label>
+          Password
+          <s.Input type="password" name="password" required autoComplete="on" />
+        </s.Label>
+        <s.Redirect>
+          Already have an account <s.Link to="/login"> Log in</s.Link>
+        </s.Redirect>
+        <Button type={"submit"} name={"Register"} />
+      </s.Form>
+    </s.Container>
   );
 };
 

@@ -7,16 +7,13 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 18px;
 
-  height: 80vh;
+  height: 770px;
   overflow-y: auto;
 
   padding: 15px;
-  border-radius: 40px;
-  background: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(37, 145, 251, 0.98) 0.1%,
-    #000780 99.8%
-  );
+  border-radius: 5px;
+  background: ${variables.colors.secondary};
+  box-shadow: ${variables.colors.boxShadowSecondary};
 `;
 
 export const List = styled.ul`

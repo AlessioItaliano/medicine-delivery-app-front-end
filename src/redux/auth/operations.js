@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Notify } from "notiflix";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL =
@@ -18,9 +19,10 @@ export const register = createAsyncThunk(
     try {
       const response = await axios.post("/auth/register", credentials);
       setAuthHeader(response.data.token);
-
+      Notify.success("Registration successful!");
       return response.data;
     } catch (error) {
+      Notify.failure("Something went wrong... Try again!");
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -32,9 +34,10 @@ export const login = createAsyncThunk(
     try {
       const response = await axios.post("/auth/login", credentials);
       setAuthHeader(response.data.token);
-
+      Notify.success("Login successful! ");
       return response.data;
     } catch (error) {
+      Notify.failure("Something went wrong... Try again!");
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -45,6 +48,7 @@ export const logout = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
     await axios.post("/auth/logout");
     clearAuthHeader();
   } catch (error) {
+    Notify.failure("Something went wrong... Try again!");
     return thunkAPI.rejectWithValue(error.message);
   }
 });

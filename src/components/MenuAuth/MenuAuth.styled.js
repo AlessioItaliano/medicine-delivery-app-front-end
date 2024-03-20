@@ -4,17 +4,6 @@ import { NavLink } from "react-router-dom";
 
 import { variables } from "stylesheet/variables";
 
-export const Header = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0 4px 4px ${variables.colors.boxShadow};
-  border-radius: 0 0 10px 10px;
-
-  background: #eee;
-`;
-
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -24,35 +13,37 @@ export const Container = styled.div`
   padding-right: 10px;
 `;
 
-export const Logo = styled(NavLink)`
+export const Link = styled(NavLink)`
   display: flex;
-  width: 70px;
-  height: auto;
-  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 21px;
 
   cursor: pointer;
-`;
 
-export const Img = styled.img`
-  width: 100%;
-  height: auto;
-`;
+  border-radius: 5px;
+  border: none;
+  background: ${variables.colors.linerGradient};
 
-export const Nav = styled.nav``;
-
-export const Link = styled(NavLink)`
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  color: ${variables.colors.primary};
+  color: ${variables.colors.secondary};
 
-  &.active,
-  &:hover {
-    color: ${variables.colors.tertiary};
-    text-decoration: underline;
+  &:focus,
+  &:hover,
+  &:active {
+    background: ${variables.colors.accent};
+    color: ${variables.colors.secondary};
   }
+`;
+
+export const UserContainer = styled.div`
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  gap: 8px;
 `;
 
 export const UserName = styled.p`

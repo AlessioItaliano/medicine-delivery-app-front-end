@@ -13,9 +13,10 @@ export const Container = styled.div`
   padding: 20px;
   width: 100%;
   height: auto;
-  border-radius: 30px;
 
-  background-color: ${variables.colors.secondary};
+  border-radius: 5px;
+  background: ${variables.colors.secondary};
+  box-shadow: ${variables.colors.boxShadowSecondary};
 
   @media screen and (min-width: ${variables.breakpoints.tablet}) {
     width: 260px;

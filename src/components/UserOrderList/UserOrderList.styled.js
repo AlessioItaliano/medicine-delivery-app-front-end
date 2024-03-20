@@ -12,12 +12,9 @@ export const Container = styled.div`
   overflow-y: auto;
 
   padding: 30px;
-  border-radius: 40px;
-  background: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(37, 145, 251, 0.98) 0.1%,
-    #000780 99.8%
-  );
+  border-radius: 5px;
+  background: ${variables.colors.secondary};
+  box-shadow: ${variables.colors.boxShadowSecondary};
 `;
 
 export const List = styled.ul`
@@ -46,5 +43,5 @@ export const EmptyWarning = styled.p`
   font-size: 24px;
   font-weight: 700;
 
-  color: ${variables.colors.secondary};
+  color: ${variables.colors.primary};
 `;

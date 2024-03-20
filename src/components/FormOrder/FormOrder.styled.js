@@ -25,9 +25,10 @@ export const InputItem = styled.input`
   font-size: 18px;
 
   color: ${variables.colors.primary};
-  background: ${variables.colors.quinary};
-  border-radius: 18px;
-  border: 1px solid transparent;
+
+  border-radius: 3px;
+  border: 1px solid ${variables.colors.accent};
+  background: ${variables.colors.secondary};
 `;
 
 export const InputPhone = styled(PhoneInput)`
@@ -36,9 +37,10 @@ export const InputPhone = styled(PhoneInput)`
   font-size: 18px;
 
   color: ${variables.colors.primary};
-  background-color: ${variables.colors.quinary};
-  border-radius: 18px;
-  border: 1px solid transparent;
+
+  border-radius: 3px;
+  border: 1px solid ${variables.colors.accent};
+  background: ${variables.colors.secondary};
 
   & input {
     background-color: transparent;

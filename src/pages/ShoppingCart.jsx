@@ -23,6 +23,7 @@ const ShoppingCart = () => {
 
   const [price, setPrice] = useState(0);
   const [discountPrice, setDiscountPrice] = useState(0);
+  const [valueInput, setValueInput] = useState("");
 
   useEffect(() => {
     if (discount !== null && discount !== 0) {
@@ -51,8 +52,11 @@ const ShoppingCart = () => {
 
   const onReadDiscount = (e) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    dispatch(getCouponById(String(form.elements.discount.value)));
+    dispatch(getCouponById(String(valueInput)));
+  };
+
+  const handleDiscountInputChange = (e) => {
+    setValueInput(e.target.value);
   };
 
   return (
@@ -74,10 +78,16 @@ const ShoppingCart = () => {
                   <s.Input
                     type="text"
                     name="discount"
+                    value={valueInput}
+                    onChange={handleDiscountInputChange}
                     autoComplete="off"
                     placeholder="Put your discount here"
                   />
-                  <Button name="Read" type="submit" />
+                  <Button
+                    name="Read"
+                    type="submit"
+                    disabled={!valueInput.trim()}
+                  />
                 </s.Form>
               </s.DiscountContainer>
 
@@ -86,7 +96,12 @@ const ShoppingCart = () => {
               ) : (
                 <s.Title>Total price: {price} $</s.Title>
               )}
-              <Button name="Submit" type="submit" func={onSubmitOrder}></Button>
+              <Button
+                name="Submit"
+                type="submit"
+                func={onSubmitOrder}
+                disabled={orders.length === 0 ? true : false}
+              ></Button>
             </s.SubmitContainer>
           </Section>
         </>
